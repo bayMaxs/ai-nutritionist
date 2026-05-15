@@ -1,0 +1,391 @@
+// ============================================
+// 食谱数据库
+// ============================================
+import { Recipe } from '../types';
+
+export const RECIPE_DATABASE: Recipe[] = [
+  // ============ 早餐 ============
+  {
+    id: 'breakfast-oat-bowl',
+    name: '益生元燕麦碗',
+    description: '富含β-葡聚糖和益生元的营养早餐',
+    mealType: 'breakfast',
+    ingredients: [
+      { foodId: 'oats', amount: 1 },
+      { foodId: 'banana', amount: 0.5 },
+      { foodId: 'blueberry', amount: 0.5 },
+      { foodId: 'walnuts', amount: 0.5 },
+      { foodId: 'flaxseed', amount: 1 },
+    ],
+    totalNutrition: { calories: 450, protein: 18, carbs: 62, fat: 16, fiber: 12 },
+    prepTime: 10,
+    instructions: [
+      '将燕麦与水或植物奶煮5分钟',
+      '切片香蕉放在燕麦上',
+      '撒上蓝莓和核桃碎',
+      '最后撒上亚麻籽粉',
+    ],
+    tags: ['益生元', '高纤维', '快速'],
+    difficulty: 'easy',
+  },
+  {
+    id: 'breakfast-yogurt-parfait',
+    name: '益生菌酸奶杯',
+    description: '富含益生菌和抗氧化物的能量早餐',
+    mealType: 'breakfast',
+    ingredients: [
+      { foodId: 'yogurt', amount: 2 },
+      { foodId: 'blueberry', amount: 1 },
+      { foodId: 'walnuts', amount: 0.5 },
+      { foodId: 'flaxseed', amount: 1 },
+    ],
+    totalNutrition: { calories: 380, protein: 22, carbs: 35, fat: 18, fiber: 8 },
+    prepTime: 5,
+    instructions: [
+      '在杯中铺一层酸奶',
+      '加入一层蓝莓',
+      '重复铺层至杯满',
+      '顶部撒上核桃碎和亚麻籽',
+    ],
+    tags: ['益生菌', '抗氧化', '快速'],
+    difficulty: 'easy',
+  },
+  {
+    id: 'breakfast-egg-spinach',
+    name: '菠菜鸡蛋卷',
+    description: '高蛋白低碳水的健康早餐',
+    mealType: 'breakfast',
+    ingredients: [
+      { foodId: 'eggs', amount: 1 },
+      { foodId: 'spinach', amount: 1 },
+      { foodId: 'olive_oil', amount: 1 },
+    ],
+    totalNutrition: { calories: 280, protein: 18, carbs: 5, fat: 22, fiber: 3 },
+    prepTime: 15,
+    instructions: [
+      '菠菜洗净切段',
+      '鸡蛋打散加少许盐',
+      '橄榄油热锅，炒菠菜至软',
+      '倒入蛋液，小火煎至凝固',
+      '对折装盘',
+    ],
+    tags: ['高蛋白', '低碳水', '快手'],
+    difficulty: 'easy',
+  },
+  {
+    id: 'breakfast-quinoa-bowl',
+    name: '藜麦能量碗',
+    description: '全蛋白谷物搭配蔬果的完美早餐',
+    mealType: 'breakfast',
+    ingredients: [
+      { foodId: 'quinoa', amount: 0.5 },
+      { foodId: 'avocado', amount: 0.5 },
+      { foodId: 'eggs', amount: 0.5 },
+      { foodId: 'spinach', amount: 0.5 },
+    ],
+    totalNutrition: { calories: 420, protein: 20, carbs: 42, fat: 20, fiber: 8 },
+    prepTime: 20,
+    instructions: [
+      '藜麦提前煮熟放凉',
+      '牛油果切片',
+      '鸡蛋煮至溏心',
+      '菠菜快速焯水',
+      '所有食材摆盘，淋少许橄榄油',
+    ],
+    tags: ['全蛋白', '超级食物'],
+    difficulty: 'medium',
+  },
+
+  // ============ 午餐 ============
+  {
+    id: 'lunch-salmon-bowl',
+    name: '三文鱼牛油果碗',
+    description: '富含Omega-3的抗炎午餐',
+    mealType: 'lunch',
+    ingredients: [
+      { foodId: 'salmon', amount: 1.5 },
+      { foodId: 'brown_rice', amount: 1 },
+      { foodId: 'avocado', amount: 0.5 },
+      { foodId: 'broccoli', amount: 1 },
+    ],
+    totalNutrition: { calories: 650, protein: 38, carbs: 55, fat: 28, fiber: 10 },
+    prepTime: 25,
+    instructions: [
+      '糙米提前煮熟',
+      '三文鱼用少许盐和胡椒腌制',
+      '平底锅煎三文鱼至两面金黄',
+      '西兰花焯水',
+      '牛油果切片',
+      '所有食材摆入碗中',
+    ],
+    tags: ['Omega-3', '抗炎', '高蛋白'],
+    difficulty: 'medium',
+  },
+  {
+    id: 'lunch-tofu-stir-fry',
+    name: '豆腐蔬菜炒饭',
+    description: '植物蛋白搭配多种蔬菜的营养午餐',
+    mealType: 'lunch',
+    ingredients: [
+      { foodId: 'tofu', amount: 1.5 },
+      { foodId: 'brown_rice', amount: 1 },
+      { foodId: 'broccoli', amount: 0.5 },
+      { foodId: 'onion', amount: 0.5 },
+      { foodId: 'garlic', amount: 1 },
+      { foodId: 'olive_oil', amount: 1 },
+    ],
+    totalNutrition: { calories: 520, protein: 24, carbs: 65, fat: 18, fiber: 9 },
+    prepTime: 20,
+    instructions: [
+      '豆腐切丁，用少许酱油腌制',
+      '糙米提前煮熟放凉',
+      '橄榄油热锅，炒香蒜末和洋葱',
+      '加入豆腐丁煎至微黄',
+      '加入西兰花和糙米翻炒',
+      '调味出锅',
+    ],
+    tags: ['植物蛋白', '益生元'],
+    difficulty: 'medium',
+  },
+  {
+    id: 'lunch-chicken-salad',
+    name: '鸡胸肉彩虹沙拉',
+    description: '高蛋白低脂的清爽午餐',
+    mealType: 'lunch',
+    ingredients: [
+      { foodId: 'chicken_breast', amount: 1.5 },
+      { foodId: 'spinach', amount: 1 },
+      { foodId: 'avocado', amount: 0.5 },
+      { foodId: 'olive_oil', amount: 1 },
+    ],
+    totalNutrition: { calories: 480, protein: 42, carbs: 12, fat: 30, fiber: 8 },
+    prepTime: 15,
+    instructions: [
+      '鸡胸肉煮熟撕成丝',
+      '菠菜洗净铺底',
+      '牛油果切片',
+      '所有食材摆盘',
+      '淋上橄榄油和柠檬汁',
+    ],
+    tags: ['高蛋白', '低碳水', '沙拉'],
+    difficulty: 'easy',
+  },
+  {
+    id: 'lunch-miso-soup',
+    name: '味噌汤配糙米',
+    description: '发酵食品搭配全谷物的日式午餐',
+    mealType: 'lunch',
+    ingredients: [
+      { foodId: 'miso', amount: 2 },
+      { foodId: 'tofu', amount: 1 },
+      { foodId: 'brown_rice', amount: 1 },
+      { foodId: 'spinach', amount: 0.5 },
+    ],
+    totalNutrition: { calories: 380, protein: 18, carbs: 55, fat: 8, fiber: 5 },
+    prepTime: 15,
+    instructions: [
+      '糙米提前煮熟',
+      '水烧开后关火，加入味噌搅匀',
+      '豆腐切小块加入汤中',
+      '菠菜焯水切段加入',
+      '配糙米饭食用',
+    ],
+    tags: ['发酵食品', '益生菌', '日式'],
+    difficulty: 'easy',
+  },
+
+  // ============ 晚餐 ============
+  {
+    id: 'dinner-salmon-veggies',
+    name: '香煎三文鱼配烤蔬菜',
+    description: '营养均衡的抗炎晚餐',
+    mealType: 'dinner',
+    ingredients: [
+      { foodId: 'salmon', amount: 1.5 },
+      { foodId: 'sweet_potato', amount: 1 },
+      { foodId: 'broccoli', amount: 1 },
+      { foodId: 'olive_oil', amount: 1 },
+    ],
+    totalNutrition: { calories: 580, protein: 35, carbs: 45, fat: 28, fiber: 10 },
+    prepTime: 30,
+    instructions: [
+      '红薯切块，橄榄油拌匀',
+      '红薯入烤箱200°C烤15分钟',
+      '三文鱼腌制',
+      '加入西兰花继续烤10分钟',
+      '平底锅煎三文鱼至喜欢的熟度',
+      '摆盘享用',
+    ],
+    tags: ['Omega-3', '抗炎', '烤箱菜'],
+    difficulty: 'medium',
+  },
+  {
+    id: 'dinner-chicken-quinoa',
+    name: '藜麦鸡胸肉碗',
+    description: '高蛋白全营养的增肌晚餐',
+    mealType: 'dinner',
+    ingredients: [
+      { foodId: 'chicken_breast', amount: 1.5 },
+      { foodId: 'quinoa', amount: 1 },
+      { foodId: 'spinach', amount: 1 },
+      { foodId: 'avocado', amount: 0.5 },
+    ],
+    totalNutrition: { calories: 560, protein: 45, carbs: 48, fat: 20, fiber: 10 },
+    prepTime: 25,
+    instructions: [
+      '藜麦煮熟',
+      '鸡胸肉用香料腌制后煎熟切片',
+      '菠菜快速焯水',
+      '牛油果切片',
+      '所有食材摆碗，淋橄榄油',
+    ],
+    tags: ['高蛋白', '全蛋白', '增肌'],
+    difficulty: 'medium',
+  },
+  {
+    id: 'dinner-tofu-curry',
+    name: '椰香豆腐咖喱',
+    description: '香浓美味的植物蛋白晚餐',
+    mealType: 'dinner',
+    ingredients: [
+      { foodId: 'tofu', amount: 2 },
+      { foodId: 'sweet_potato', amount: 1 },
+      { foodId: 'onion', amount: 1 },
+      { foodId: 'garlic', amount: 1 },
+      { foodId: 'brown_rice', amount: 1 },
+    ],
+    totalNutrition: { calories: 550, protein: 22, carbs: 72, fat: 18, fiber: 10 },
+    prepTime: 30,
+    instructions: [
+      '豆腐切块煎至金黄',
+      '洋葱和蒜切碎炒香',
+      '红薯切块加入',
+      '加椰奶和咖喱粉煮至红薯软烂',
+      '加入煎好的豆腐',
+      '配糙米饭食用',
+    ],
+    tags: ['植物蛋白', '抗炎', '咖喱'],
+    difficulty: 'medium',
+  },
+  {
+    id: 'dinner-egg-veggie',
+    name: '蔬菜烘蛋',
+    description: '简单快手的营养晚餐',
+    mealType: 'dinner',
+    ingredients: [
+      { foodId: 'eggs', amount: 1.5 },
+      { foodId: 'spinach', amount: 1 },
+      { foodId: 'onion', amount: 0.5 },
+      { foodId: 'olive_oil', amount: 1 },
+    ],
+    totalNutrition: { calories: 350, protein: 22, carbs: 10, fat: 26, fiber: 4 },
+    prepTime: 15,
+    instructions: [
+      '菠菜和洋葱切碎',
+      '鸡蛋打散',
+      '橄榄油热锅，炒蔬菜',
+      '倒入蛋液，小火慢烘',
+      '烤箱180°C烤至表面金黄',
+    ],
+    tags: ['快手', '低碳水'],
+    difficulty: 'easy',
+  },
+
+  // ============ 零食 ============
+  {
+    id: 'snack-kefir-smoothie',
+    name: '开菲尔果昔',
+    description: '益生菌满满的健康饮品',
+    mealType: 'snack',
+    ingredients: [
+      { foodId: 'kefir', amount: 2 },
+      { foodId: 'banana', amount: 0.5 },
+      { foodId: 'blueberry', amount: 1 },
+    ],
+    totalNutrition: { calories: 200, protein: 10, carbs: 30, fat: 5, fiber: 4 },
+    prepTime: 5,
+    instructions: [
+      '所有材料放入搅拌机',
+      '搅拌至顺滑',
+      '倒入杯中即可饮用',
+    ],
+    tags: ['益生菌', '快速', '饮品'],
+    difficulty: 'easy',
+  },
+  {
+    id: 'snack-walnuts-fruit',
+    name: '坚果水果拼盘',
+    description: '补充健康脂肪和抗氧化物',
+    mealType: 'snack',
+    ingredients: [
+      { foodId: 'walnuts', amount: 1 },
+      { foodId: 'apple', amount: 1 },
+      { foodId: 'blueberry', amount: 0.5 },
+    ],
+    totalNutrition: { calories: 280, protein: 6, carbs: 30, fat: 16, fiber: 6 },
+    prepTime: 3,
+    instructions: [
+      '苹果切片',
+      '核桃装碟',
+      '蓝莓洗净',
+      '摆盘享用',
+    ],
+    tags: ['零食', 'Omega-3', '抗氧化'],
+    difficulty: 'easy',
+  },
+  {
+    id: 'snack-kimchi-rice',
+    name: '泡菜饭团',
+    description: '益生菌和碳水的完美搭配',
+    mealType: 'snack',
+    ingredients: [
+      { foodId: 'kimchi', amount: 1 },
+      { foodId: 'brown_rice', amount: 0.5 },
+    ],
+    totalNutrition: { calories: 150, protein: 5, carbs: 28, fat: 1, fiber: 3 },
+    prepTime: 10,
+    instructions: [
+      '糙米饭放至温热',
+      '泡菜切碎拌入饭中',
+      '捏成小饭团',
+      '可撒少许芝麻',
+    ],
+    tags: ['益生菌', '发酵食品', '小食'],
+    difficulty: 'easy',
+  },
+  {
+    id: 'snack-yogurt-berry',
+    name: '莓果酸奶',
+    description: '简单美味的益生菌零食',
+    mealType: 'snack',
+    ingredients: [
+      { foodId: 'yogurt', amount: 1.5 },
+      { foodId: 'blueberry', amount: 0.5 },
+      { foodId: 'flaxseed', amount: 1 },
+    ],
+    totalNutrition: { calories: 160, protein: 12, carbs: 15, fat: 6, fiber: 5 },
+    prepTime: 3,
+    instructions: [
+      '酸奶倒入碗中',
+      '加入蓝莓',
+      '撒上亚麻籽粉',
+    ],
+    tags: ['益生菌', '快速', '零食'],
+    difficulty: 'easy',
+  },
+];
+
+/** 按餐型获取食谱 */
+export function getRecipesByMealType(mealType: Recipe['mealType']): Recipe[] {
+  return RECIPE_DATABASE.filter(r => r.mealType === mealType);
+}
+
+/** 根据标签筛选食谱 */
+export function getRecipesByTags(tags: string[]): Recipe[] {
+  return RECIPE_DATABASE.filter(r => tags.some(tag => r.tags.includes(tag)));
+}
+
+/** 根据ID获取食谱 */
+export function getRecipeById(id: string): Recipe | undefined {
+  return RECIPE_DATABASE.find(r => r.id === id);
+}
